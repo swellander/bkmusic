@@ -23,9 +23,9 @@ const Giglist = ({ classes, edges }) => {
           {edges.map((edge, i) => {
             const { frontmatter } = edge.node;
             return (
-              <Fragment>
+              <Fragment key={frontmatter.id}>
                 <Gig key={frontmatter.id} gig={frontmatter} />
-                <Divider />
+                <Divider key={frontmatter.id} />
               </Fragment>
             )
           })}
