@@ -1,7 +1,7 @@
 import React from "react"
 import { Toolbar, IconButton, AppBar, Typography, withStyles } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
-
+import { Link } from 'gatsby';
 
 const styles = {
   root: {
@@ -17,19 +17,30 @@ const styles = {
   bar: {
     background: 'transparent',
     boxShadow: 'none',
-    color: 'black'
+    color: 'black',
   },
+  title: {
+    flexGrow: 1,
+    fontSize: 20,
+    letterSpacing: 4,
+  },
+  white: {
+    position: 'absolute',
+    background: 'transparent',
+    boxShadow: 'none',
+    color: 'white',
+  }
 };
 
-const Header = ({ classes }) => (
+const Header = ({ classes, splash }) => (
   <div>
-    <AppBar className={classes.bar} position="static">
+    <AppBar className={splash ? classes.white : classes.bar} position="static">
       <Toolbar>
-        <Typography variant="h6" color="inherit" className={classes.grow}>
+        <Typography to="/" component={Link} color="inherit" className={classes.title}>
           BRANDON NELSON
         </Typography>
         <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
-          <MenuIcon />
+          <MenuIcon fontSize="large" />
         </IconButton>
       </Toolbar>
     </AppBar>

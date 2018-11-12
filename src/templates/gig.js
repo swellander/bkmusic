@@ -35,7 +35,7 @@ class GigDetail extends Component {
   render() {
     const { markdownRemark } = this.props.data // data.markdownRemark holds our post data
     const { frontmatter } = markdownRemark
-    const { description, address, venue, title, date } = frontmatter
+    const { description, venue, title, date } = frontmatter
     const { classes } = this.props;
 
     return (

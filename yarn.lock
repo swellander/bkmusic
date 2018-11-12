@@ -8310,6 +8310,13 @@ react-scroll-sync@^0.6.0:
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/react-scroll-sync/-/react-scroll-sync-0.6.0.tgz#c87eba2cdd55ae35874277d74b034419d73df59a"
 
+react-social-icons@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/react-social-icons/-/react-social-icons-3.0.0.tgz#667de84c08fb2247eaa79f676e3aa1d6edc59f59"
+  dependencies:
+    babel-runtime "^6.11.6"
+    classnames "^2.2.5"
+
 react-sortable-hoc@^0.6.8:
   version "0.6.8"
   resolved "https://registry.yarnpkg.com/react-sortable-hoc/-/react-sortable-hoc-0.6.8.tgz#b08562f570d7c41f6e393fca52879d2ebb9118e9"

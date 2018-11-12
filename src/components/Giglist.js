@@ -7,7 +7,8 @@ import { Link } from 'gatsby'
 
 const styles = {
   container: {
-    height: '100vh'
+    height: '100%',
+    backgroundColor: 'white',
   },
   link: {
     width: '100%',
@@ -18,8 +19,8 @@ const Giglist = ({ classes, edges }) => {
   return (
     <div className={classes.container}>
       <h3>Tour Dates</h3>
-      < Grid container justify="center" >
-        <Grid item lg={9} xs={11} justify="center" container>
+      <Grid container justify="center" >
+        <Grid item lg={7} xs={11} justify="center" container>
           {edges.map((edge, i) => {
             const { frontmatter } = edge.node;
             return (
