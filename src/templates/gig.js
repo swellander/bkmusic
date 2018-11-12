@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import { graphql } from "gatsby"
 import Header from '../components/Header';
 import Map from '../components/Map';
-import { withStyles, Grid, Typography } from '@material-ui/core';
+import { withStyles, Grid, Typography, Divider } from '@material-ui/core';
 import moment from "moment"
 import Geocode from 'react-geocode'
 
@@ -11,7 +11,8 @@ const styles = {
     marginTop: 50
   },
   map: {
-    height: 200
+    height: 200,
+    marginTop: 38
   }
 }
 
@@ -46,16 +47,17 @@ class GigDetail extends Component {
               <Typography variant="h4">
                 {title}
               </Typography>
-              <Typography>
+              <Divider />
+              <Typography variant="subheading" style={{ marginTop: 10 }}>
                 {moment(date).format('dddd, MMMM Do, YYYY')}
               </Typography>
-              <Typography>
-                {moment(date).format('h:mm a')}
-              </Typography>
-              <Typography>
+              <Typography variant="subtitle2">
                 {venue}
               </Typography>
-              <Typography>
+              <Typography variant="caption">
+                {moment(date).format('h:mm a')}
+              </Typography>
+              <Typography style={{ marginTop: 10 }}>
                 {description}
               </Typography>
             </Grid>
