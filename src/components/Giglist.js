@@ -1,9 +1,8 @@
 import React, { Fragment } from "react"
 import Gig from './Gig'
-import { withStyles, Grid, } from '@material-ui/core';
-import Divider from '@material-ui/core/Divider';
-import { Link } from 'gatsby'
-
+import { Typography, withStyles, Grid, } from '@material-ui/core';
+import ParaDivider from "./ParaDivider";
+import gigListImg from './smile.jpg';
 
 const styles = {
   container: {
@@ -17,22 +16,28 @@ const styles = {
 
 const Giglist = ({ classes, edges }) => {
   return (
-    <div className={classes.container}>
-      <h3>Tour Dates</h3>
-      <Grid container justify="center" >
-        <Grid item lg={7} xs={11} justify="center" container>
-          {edges.map((edge, i) => {
-            const { frontmatter } = edge.node;
-            return (
-              <Fragment key={frontmatter.id}>
-                <Gig key={frontmatter.id} gig={frontmatter} />
-                <Divider key={frontmatter.id} />
-              </Fragment>
-            )
-          })}
+    <Fragment>
+      <ParaDivider
+        min={-150}
+        max={150}
+        image={gigListImg}
+      >
+        <Typography>PERFORMANCES</Typography>
+      </ParaDivider>
+      <div className={classes.container}>
+        <h3>Tour Dates</h3>
+        <Grid container justify="center" >
+          <Grid item lg={7} xs={11} justify="center" container>
+            {edges.map((edge, i) => {
+              const { frontmatter } = edge.node;
+              return (
+                <Gig key={i} gig={frontmatter} />
+              )
+            })}
+          </Grid>
         </Grid>
-      </Grid>
-    </div>
+      </div>
+    </Fragment>
   )
 }
 

@@ -20,7 +20,7 @@ const styles = {
 
 const Footer = ({ classes, splash }) => (
   <Grid className={classes.container} container justify="center" alignItems="center">
-    <Grid item xs={12} justify="center" className={classes.innnerContainer}>
+    <Grid container item xs={12} justify="center" className={classes.innnerContainer}>
       <IconButton className={classes.iconBtn}>
         <SocialIcon url='https://www.facebook.com/Brandon.Loves.Pie' className={classes.icon} color="white" />
       </IconButton>

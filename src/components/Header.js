@@ -24,11 +24,20 @@ const styles = {
     fontSize: 20,
     letterSpacing: 4,
   },
+  transparent: {
+    opacity: 0,
+    flexGrow: 1,
+    fontSize: 20,
+    letterSpacing: 4,
+  },
   white: {
     position: 'absolute',
     background: 'transparent',
     boxShadow: 'none',
     color: 'white',
+  },
+  menuButton: {
+    float: 'right'
   }
 };
 
@@ -36,7 +45,7 @@ const Header = ({ classes, splash }) => (
   <div>
     <AppBar className={splash ? classes.white : classes.bar} position="static">
       <Toolbar>
-        <Typography to="/" component={Link} color="inherit" className={classes.title}>
+        <Typography to="/" component={Link} color="inherit" className={splash ? classes.transparent : classes.title}>
           BRANDON NELSON
         </Typography>
         <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
