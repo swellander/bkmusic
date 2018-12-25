@@ -4,7 +4,7 @@ import { withStyles, Grid, } from '@material-ui/core';
 import Divider from '@material-ui/core/Divider';
 import { Link } from 'gatsby'
 import ParallaxDivider from "./ParallaxDivider";
-import performancesImg from './smile.jpg';
+import performancesImg from '../img/smile.jpg';
 
 const styles = {
   container: {

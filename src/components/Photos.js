@@ -1,7 +1,7 @@
 import React, { Fragment, Component } from "react"
 import { Typography, withStyles, Grid, } from '@material-ui/core';
 import ParallaxDivider from "./ParallaxDivider";
-import performancesImg from './quick.jpg';
+import performancesImg from '../img/quick.jpg';
 import Instafeed from 'instafeed.js';
 import PhotoGrid from "./PhotoGrid";
 

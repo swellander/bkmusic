@@ -1,7 +1,7 @@
 import React from "react"
 import { Parallax } from 'react-scroll-parallax';
 import { withStyles, Typography } from '@material-ui/core';
-import splashImg from './splash.jpg';
+import splashImg from '../img/splash.jpg';
 
 const styles = {
   container: {

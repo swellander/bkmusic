@@ -1,7 +1,7 @@
 import React, { Fragment } from "react"
 import { withStyles, Grid, Typography, } from '@material-ui/core';
 import ParallaxDivider from "./ParallaxDivider";
-import contactImg from './band.jpg';
+import contactImg from '../img/band.jpg';
 import ContactForm from "./ContactForm";
 
 const styles = {
