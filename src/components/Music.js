@@ -1,26 +1,46 @@
-import React, { Fragment } from "react"
-import Gig from './Gig'
-import { Typography, withStyles, Grid, } from '@material-ui/core';
-import Divider from '@material-ui/core/Divider';
 
+import React from 'react';
+import { ParallaxBanner } from 'react-scroll-parallax';
+import { withStyles, Grid, Typography } from '@material-ui/core';
+import SoundCloud from './SoundCloud';
 
 const styles = {
   container: {
     height: '100vh',
-    backgroundColor: 'white',
+    backgroundColor: 'white'
   },
-  link: {
-    width: '100%',
+  titleContainer: {
+    textAlign: 'center'
+  },
+  title: {
+    letterSpacing: 11,
   }
 }
 
-const Giglist = ({ classes, edges }) => {
+const Music = ({ classes }) => {
   return (
-    <Grid container justify="center" alignItems="center" className={classes.container}>
-
-      <Typography variant="display3">Music</Typography>
+    <Grid
+      container
+      justify="center"
+      alignItems="center"
+      className={classes.container}
+    >
+      <Grid
+        item
+        xs={12}
+        className={classes.titleContainer}
+      >
+        {/* <Typography
+          variant="display2"
+          className={classes.title}
+        >
+          MUSIC
+      </Typography> */}
+        <SoundCloud />
+      </Grid>
     </Grid>
+
   )
 }
 
-export default withStyles(styles)(Giglist);
+export default withStyles(styles)(Music);

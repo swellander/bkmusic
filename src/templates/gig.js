@@ -1,18 +1,25 @@
 import React, { Component } from "react"
 import { graphql } from "gatsby"
 import Header from '../components/Header';
-import Map from '../components/Map';
 import { withStyles, Grid, Typography, Divider } from '@material-ui/core';
 import moment from "moment"
+import Map from '../components/Map';
+import Footer from "../components/Footer";
 import Geocode from 'react-geocode'
 
 const styles = {
   container: {
-    marginTop: 50
+    marginTop: 50,
+    height: '100%',
   },
   map: {
     height: 200,
     marginTop: 38
+  },
+  footer: {
+    position: 'absolute',
+    bottom: 0,
+    left: 0
   }
 }
 
@@ -63,10 +70,14 @@ class GigDetail extends Component {
             </Grid>
 
             <Grid className={classes.map} item xs={12} lg={6}>
-              <Map test="test" center={this.state.center} />
+              {/* <Map test="test" center={this.state.center} /> */}
+              <Map center={this.state.center} />
             </Grid>
           </Grid>
         </Grid>
+        <div className={classes.footer}>
+          <Footer />
+        </div>
       </div>
     )
   }

@@ -1,7 +1,7 @@
 import React from "react"
 import { Parallax } from 'react-scroll-parallax';
 import { withStyles, Typography } from '@material-ui/core';
-import splashImg from './splash.jpg';
+import splashImg from '../img/splash.jpg';
 
 const styles = {
   container: {
@@ -27,7 +27,8 @@ const styles = {
     right: 0,
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    textAlign: 'center',
   },
   title: {
     color: 'white',

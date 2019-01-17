@@ -13,7 +13,7 @@ const styles = {
   dateSquare: {
     height: 80,
     width: 80,
-    backgroundColor: 'black',
+    backgroundColor: '#1f1f1f',
     borderRadius: 4,
     color: 'white',
     margin: 0,
@@ -28,7 +28,7 @@ const styles = {
 
 const Gig = ({ classes, gig }) => {
   const formattedDate = moment(gig.date).format("MMM D")
-  const time = moment(gig.date).format('h:mm a')
+  const time = moment(gig.date).format("h:mma")
   return (
     <Grid xs={12} item container wrap="wrap">
       <Grid item xs={1} className={classes.dateSquareContainer}>
@@ -40,15 +40,17 @@ const Gig = ({ classes, gig }) => {
           </Grid>
         </Paper>
       </Grid>
-      <Grid item xs={8} className={classes.bodyContainer}>
+      {/* TODO: this is a hacky way to get spacing */}
+      <Grid item xs={2}></Grid>
+      <Grid item xs={6} className={classes.bodyContainer}>
         <Typography variant="display1">
           {gig.title}
         </Typography>
         <Typography>
-          {gig.date}
+          {gig.venue}
         </Typography>
         <Typography>
-          {gig.address}
+          {time}
         </Typography>
         <Button
           to={gig.path}

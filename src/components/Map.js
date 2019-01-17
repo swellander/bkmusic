@@ -1,37 +1,33 @@
 import React, { Component } from 'react';
-import GoogleMapReact from 'google-map-react';
-import { MusicNote } from '@material-ui/icons';
+import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
 
-class Map extends Component {
-  static defaultProps = {
-    center: {
-      lat: 59.95,
-      lng: 30.33
-    },
-    zoom: 11
-  };
-
+export class MapContainer extends Component {
   render() {
-    const { center, zoom } = this.props;
-    const { lat, lng } = center;
-    console.log(this.props)
+    console.log(this.props);
     return (
-      // Important! Always set the container height explicitly
-      <div style={{ height: 400, width: '100%' }}>
-        <GoogleMapReact
-          bootstrapURLKeys={{ key: process.env.MAP_KEY }}
-          defaultCenter={center}
-          defaultZoom={zoom}
-        >
-          <MusicNote
-            fontSize="large"
-            lat={lat}
-            lng={lng}
-          />
-        </GoogleMapReact>
-      </div>
+      <Map
+        style={{ width: 600, height: 400 }}
+        google={this.props.google}
+        zoom={14}
+        center={this.props.center}
+      >
+
+        <Marker
+          onClick={this.onMarkerClick}
+          name={'Current location'}
+          position={this.props.center}
+        />
+
+        <InfoWindow onClose={this.onInfoWindowClose}>
+          <div>
+            <h1>yo</h1>
+          </div>
+        </InfoWindow>
+      </Map>
     );
   }
 }
 
-export default Map;
+export default GoogleApiWrapper({
+  apiKey: ('AIzaSyBQbdqu0nFdFsqJPS0czvCovV5JnuwsCy4')
+})(MapContainer)
