@@ -7,7 +7,9 @@ import Photos from '../components/Photos';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import { ParallaxProvider } from 'react-scroll-parallax';
+
 import '../layout/global.css';
+import ParaDivider from "../components/ParaDivider";
 
 export default ({ data }) => (
   <ParallaxProvider>

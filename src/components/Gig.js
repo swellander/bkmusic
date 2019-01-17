@@ -30,8 +30,8 @@ const Gig = ({ classes, gig }) => {
   const formattedDate = moment(gig.date).format("MMM D")
   const time = moment(gig.date).format("h:mma")
   return (
-    <Grid xs={12} container wrap="wrap">
-      <Grid item xs={1} justify="flex-end" className={classes.dateSquareContainer}>
+    <Grid xs={12} item container wrap="wrap">
+      <Grid item xs={1} className={classes.dateSquareContainer}>
         <Paper className={classes.dateSquare}>
           <Grid justify="center" alignItems="center" container style={{ height: '100%' }}>
             <Typography variant="subheading" style={{ color: "white", textAlign: 'center' }}>
