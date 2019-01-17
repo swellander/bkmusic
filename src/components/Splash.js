@@ -27,7 +27,8 @@ const styles = {
     right: 0,
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    textAlign: 'center',
   },
   title: {
     color: 'white',
