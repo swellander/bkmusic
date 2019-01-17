@@ -22,7 +22,7 @@ const Giglist = ({ classes, edges }) => {
     <Fragment>
       <ParallaxDivider image={performancesImg} title="Performances" />
       <div className={classes.container}>
-        < Grid container justify="center" >
+        <Grid container justify="center">
           <Grid item lg={9} xs={11} justify="center" container>
             {edges.map((edge, i) => {
               const { frontmatter } = edge.node;
@@ -36,7 +36,7 @@ const Giglist = ({ classes, edges }) => {
           </Grid>
         </Grid>
       </div>
-    </Fragment >
+    </Fragment>
   )
 }
 

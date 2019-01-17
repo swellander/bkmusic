@@ -40,7 +40,9 @@ const Gig = ({ classes, gig }) => {
           </Grid>
         </Paper>
       </Grid>
-      <Grid item xs={8} className={classes.bodyContainer}>
+      {/* TODO: this is a hacky way to get spacing */}
+      <Grid item xs={2}></Grid>
+      <Grid item xs={6} className={classes.bodyContainer}>
         <Typography variant="display1">
           {gig.title}
         </Typography>
