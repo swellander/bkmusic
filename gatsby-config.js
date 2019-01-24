@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: '/bkmusic',
   plugins: [`gatsby-plugin-netlify-cms`, {
     resolve: 'gatsby-source-filesystem',
     options: {

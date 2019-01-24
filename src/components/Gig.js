@@ -1,5 +1,5 @@
 import React, { Fragment } from "react"
-import { withStyles, Paper, Grid, Typography, Button } from '@material-ui/core';
+import { withStyles, Paper, Grid, Typography, Button, Hidden } from '@material-ui/core';
 import { Link } from 'gatsby';
 import moment from 'moment'
 
@@ -8,7 +8,7 @@ const styles = {
     float: 'right'
   },
   dateSquareContainer: {
-    marginRight: 30
+    // marginRight: 30
   },
   dateSquare: {
     height: 80,
@@ -19,7 +19,9 @@ const styles = {
     margin: 0,
   },
   bodyContainer: {
-    paddingBottom: 70
+    paddingBottom: 70,
+    marginLeft: 80
+
   },
   btn: {
     marginTop: 20
@@ -41,7 +43,6 @@ const Gig = ({ classes, gig }) => {
         </Paper>
       </Grid>
       {/* TODO: this is a hacky way to get spacing */}
-      <Grid item xs={2}></Grid>
       <Grid item xs={6} className={classes.bodyContainer}>
         <Typography variant="display1">
           {gig.title}
