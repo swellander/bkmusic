@@ -50,6 +50,8 @@ class GigDetail extends Component {
     const { description, venue, title, date } = frontmatter;
     const { classes } = this.props;
 
+    console.log("Center:", this.state.center);
+
     return (
       <div className={classes.wrapper}>
         <Header />
@@ -70,7 +72,7 @@ class GigDetail extends Component {
 
             <Grid className={classes.map} item xs={12} lg={6}>
               {/* <Map test="test" center={this.state.center} /> */}
-              {/* <Map center={this.state.center} /> */}
+              <Map center={this.state.center} />
             </Grid>
           </Grid>
         </Grid>
