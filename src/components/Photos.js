@@ -40,7 +40,7 @@ class Photos extends Component {
     const { classes } = this.props;
     return (
       <Fragment>
-        <ParallaxDivider image={performancesImg} title="@brandonnelsonmusic" />
+        <ParallaxDivider image={performancesImg} title="Style" />
         <div className={classes.container}>
           <PhotoGrid imageData={this.state.imageData} />
           <div style={{ display: 'none' }} id="instafeed"></div>
