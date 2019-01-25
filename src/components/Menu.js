@@ -1,29 +1,35 @@
-import React from 'react';
-import { SwipeableDrawer, List, ListItem, ListItemText, IconButton, withStyles } from '@material-ui/core';
-import MenuIcon from '@material-ui/icons/Menu';
+import React from "react";
+import {
+  SwipeableDrawer,
+  List,
+  ListItem,
+  ListItemText,
+  IconButton,
+  withStyles
+} from "@material-ui/core";
+import MenuIcon from "@material-ui/icons/Menu";
 
 const styles = {
   menuButton: {
     marginLeft: -12,
-    marginRight: 20,
+    marginRight: 20
   },
   menuList: {
-    backgroundColor: 'black'
+    backgroundColor: "black"
   }
-}
+};
 
 class Menu extends React.Component {
   state = {
     open: false
-  }
+  };
   toggleDrawer = open => {
-    console.log('toggling menu')
-    this.setState({ open })
-  }
+    this.setState({ open });
+  };
   render() {
     const { classes } = this.props;
     const sideMenu = (
-      <List >
+      <List>
         <ListItem button>
           <ListItemText primary="Music" />
         </ListItem>
@@ -37,10 +43,15 @@ class Menu extends React.Component {
           <ListItemText primary="Contact" />
         </ListItem>
       </List>
-    )
+    );
     return (
       <div>
-        <IconButton className={classes.menuButton} color="inherit" aria-label="Menu" onClick={() => this.toggleDrawer(true)}>
+        <IconButton
+          className={classes.menuButton}
+          color="inherit"
+          aria-label="Menu"
+          onClick={() => this.toggleDrawer(true)}
+        >
           <MenuIcon fontSize="large" />
         </IconButton>
         <SwipeableDrawer
@@ -51,7 +62,7 @@ class Menu extends React.Component {
         >
           {sideMenu}
         </SwipeableDrawer>
-      </div >
+      </div>
     );
   }
 }

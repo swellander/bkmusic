@@ -31,15 +31,12 @@ class GigDetail extends Component {
     center: {}
   };
   componentDidMount() {
-    console.log("current Props:", this.props);
-    console.log("geocode key:", process.env.GEO_KEY);
     Geocode.setApiKey(process.env.GEO_KEY);
     Geocode.fromAddress(
       this.props.data.markdownRemark.frontmatter.address
     ).then(
       response => {
         const center = response.results[0].geometry.location;
-        console.log("inner center:", center);
         this.setState({ center });
       },
       error => {

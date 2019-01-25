@@ -36,7 +36,6 @@ class Photos extends Component {
     feed.run();
   }
   render() {
-    console.log(this.state);
     const { classes } = this.props;
     return (
       <Fragment>

@@ -19,7 +19,6 @@ class Map extends Component {
     // this.initMap();
   }
   componentDidUpdate(prev) {
-    console.log("updating");
     if (prev.center !== this.props.center) this.initMap();
   }
   render() {

@@ -37,7 +37,6 @@ function PhotoGrid(props) {
   } else {
     images = fake;
   }
-  console.log(images);
   return (
     <div className={classes.root}>
       <Grid container justify="center" alignContent="center">
