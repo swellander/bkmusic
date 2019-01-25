@@ -1,19 +1,19 @@
-import React, { Fragment } from "react"
-import { withStyles, Grid, Typography, } from '@material-ui/core';
+import React, { Fragment } from "react";
+import { withStyles } from "@material-ui/core";
 import ParallaxDivider from "./ParallaxDivider";
-import contactImg from '../img/band.jpg';
+import contactImg from "../img/band.jpg";
 import ContactForm from "./ContactForm";
 
 const styles = {
   container: {
-    height: '100%',
-    backgroundColor: 'white',
+    height: "100%",
+    backgroundColor: "white",
     paddingTop: 30
   },
   link: {
-    width: '100%',
+    width: "100%"
   }
-}
+};
 
 const Contact = ({ classes, edges }) => {
   return (
@@ -22,8 +22,8 @@ const Contact = ({ classes, edges }) => {
       <div className={classes.container}>
         <ContactForm />
       </div>
-    </Fragment >
-  )
-}
+    </Fragment>
+  );
+};
 
 export default withStyles(styles)(Contact);

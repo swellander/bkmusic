@@ -1,26 +1,24 @@
-import React, { Fragment } from "react"
-import Gig from './Gig'
-import { withStyles, Grid, } from '@material-ui/core';
-import Divider from '@material-ui/core/Divider';
-import { Link } from 'gatsby'
+import React, { Fragment } from "react";
+import Gig from "./Gig";
+import { withStyles, Grid } from "@material-ui/core";
+import Divider from "@material-ui/core/Divider";
 import ParallaxDivider from "./ParallaxDivider";
-import performancesImg from '../img/smile.jpg';
+import performancesImg from "../img/smile.jpg";
 
 const styles = {
   container: {
-    height: '100%',
-    backgroundColor: 'white',
+    height: "100%",
+    backgroundColor: "white",
     paddingTop: 30
   },
   link: {
-    width: '100%',
+    width: "100%"
   }
-}
+};
 
 const Giglist = ({ classes, edges }) => {
   return (
     <Fragment>
-
       <ParallaxDivider image={performancesImg} title="Performances" />
       <div className={classes.container}>
         <Grid container justify="center">
@@ -32,13 +30,13 @@ const Giglist = ({ classes, edges }) => {
                   <Gig key={frontmatter.id} gig={frontmatter} />
                   <Divider />
                 </Fragment>
-              )
+              );
             })}
           </Grid>
         </Grid>
       </div>
     </Fragment>
-  )
-}
+  );
+};
 
 export default withStyles(styles)(Giglist);

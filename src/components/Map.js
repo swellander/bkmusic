@@ -10,14 +10,17 @@ const styles = {
 class Map extends Component {
   initMap = () => {
     const { center } = this.props;
-    console.log("center", center);
     new window.google.maps.Map(document.getElementById("map"), {
-      center: { lat: 40, lng: 10 },
-      zoom: 5
+      center,
+      zoom: 14
     });
   };
   componentDidMount() {
-    this.initMap();
+    // this.initMap();
+  }
+  componentDidUpdate(prev) {
+    console.log("updating");
+    if (prev.center !== this.props.center) this.initMap();
   }
   render() {
     const { classes } = this.props;

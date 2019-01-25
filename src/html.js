@@ -23,7 +23,7 @@ export default class HTML extends React.Component {
           />
           {this.props.postBodyComponents}
           <script
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCE-uei8_PDAsEzd14pj0z8tYF_MBhd_XQ&callback=initMap"
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAalGPy1sW3aX2aAFqSRfRDA-R4pvOUtE&callback=initMap"
             async
             defer
           />
