@@ -40,7 +40,7 @@ function PhotoGrid(props) {
   console.log(images);
   return (
     <div className={classes.root}>
-      <Grid conainer justify="center" alignContent="center">
+      <Grid container justify="center" alignContent="center">
         <Grid className={classes.inner} item xs={11} lg={9}>
           {/* <div style={{ backgroundColor: 'green', height: 50, width: 50 }}></div> */}
           <GridList

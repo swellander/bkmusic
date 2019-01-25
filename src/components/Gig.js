@@ -39,7 +39,7 @@ const Gig = ({ classes, gig }) => {
             style={{ height: "100%" }}
           >
             <Typography
-              variant="subheading"
+              variant="subtitle1"
               style={{ color: "white", textAlign: "center" }}
             >
               {formattedDate}
@@ -49,7 +49,7 @@ const Gig = ({ classes, gig }) => {
       </Grid>
       {/* TODO: this is a hacky way to get spacing */}
       <Grid item xs={8} className={classes.bodyContainer}>
-        <Typography variant="display1">{gig.title}</Typography>
+        <Typography variant="h4">{gig.title}</Typography>
         <Typography>{gig.venue}</Typography>
         <Typography>{time}</Typography>
         <Button

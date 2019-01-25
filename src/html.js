@@ -27,6 +27,9 @@ export default class HTML extends React.Component {
             async
             defer
           />
+          <script>
+            {(window.__MUI_USE_NEXT_TYPOGRAPHY_VARIANTS__ = true)}
+          </script>
         </body>
       </html>
     );

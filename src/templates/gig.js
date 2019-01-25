@@ -61,7 +61,7 @@ class GigDetail extends Component {
             <Grid item xs={12} lg={5}>
               <Typography variant="h4">{title}</Typography>
               <Divider />
-              <Typography variant="subheading" style={{ marginTop: 10 }}>
+              <Typography variant="subtitle1" style={{ marginTop: 10 }}>
                 {moment(date).format("dddd, MMMM Do, YYYY")}
               </Typography>
               <Typography variant="subtitle2">{venue}</Typography>

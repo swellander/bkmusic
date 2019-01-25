@@ -9,7 +9,7 @@ const SoundCloud = () => (
         width="100%"
         height="600"
         scrolling="no"
-        frameborder="no"
+        frameBorder="no"
         allow="autoplay"
         src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/214071001&color=%23ff0000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
       />
