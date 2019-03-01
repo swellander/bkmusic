@@ -1,7 +1,7 @@
 ---
-title: 'Boomin'' Tunes '
+title: "Boomin' Tunes "
 venue: Birch Street Uptown Lounge
-address: '2137, 311 NE Birch St, Camas, WA 98607'
+address: "2137, 311 NE Birch St, Camas, WA 98607"
 date: 2018-12-01T02:00:10.047Z
 description: >-
   Lorem ipsum dolor amet venmo cred edison bulb, waistcoat ramps small batch
@@ -12,8 +12,7 @@ description: >-
   food truck 3 wolf moon knausgaard lomo readymade lyft tote bag put a bird on
   it. Af portland wolf selvage pork belly. Jean shorts master cleanse everyday
   carry, yuccie kickstarter normcore gluten-free meh dreamcatcher. Scenester
-  biodiesel semiotics cliche yr.
+  biodiesel semiotics cliche yr. add a sentence
 link: facebook.com
 path: /birch-street
 ---
-
