@@ -1,52 +1,51 @@
-import React, { Fragment, Component } from "react"
-import { Typography, withStyles, Grid, } from '@material-ui/core';
+import React, { Fragment, Component } from "react";
+import { withStyles } from "@material-ui/core";
 import ParallaxDivider from "./ParallaxDivider";
-import performancesImg from '../img/quick.jpg';
-import Instafeed from 'instafeed.js';
+import performancesImg from "../img/quick.jpg";
+import Instafeed from "instafeed.js";
 import PhotoGrid from "./PhotoGrid";
 
 const styles = {
   container: {
-    height: '100%',
-    width: '100vw',
-    backgroundColor: 'white',
+    height: "100%",
+    width: "100vw",
+    backgroundColor: "white",
     paddingTop: 30
   },
   link: {
-    width: '100%',
+    width: "100%"
   }
-}
+};
 
 class Photos extends Component {
   state = {
     imageData: []
-  }
+  };
   componentDidMount() {
     const feed = new Instafeed({
-      get: 'user',
-      userId: '286664193',
-      accessToken: '286664193.1677ed0.d46b9c3d793745748af14e333fb0c25c',
+      get: "user",
+      userId: "286664193",
+      accessToken: "286664193.1677ed0.d46b9c3d793745748af14e333fb0c25c",
       limit: 15,
-      sortBy: 'most-recent',
-      resolution: 'standard_resolution',
-      success: (response) => {
-        this.setState({ imageData: response.data })
-      },
+      sortBy: "most-recent",
+      resolution: "standard_resolution",
+      success: response => {
+        this.setState({ imageData: response.data });
+      }
     });
-    feed.run()
+    feed.run();
   }
   render() {
-    console.log(this.state);
     const { classes } = this.props;
     return (
       <Fragment>
-        <ParallaxDivider image={performancesImg} title="@brandonnelsonmusic" />
+        <ParallaxDivider image={performancesImg} title="Style" />
         <div className={classes.container}>
           <PhotoGrid imageData={this.state.imageData} />
-          <div style={{ display: 'none' }} id="instafeed"></div>
+          <div style={{ display: "none" }} id="instafeed" />
         </div>
-      </Fragment >
-    )
+      </Fragment>
+    );
   }
 }
 

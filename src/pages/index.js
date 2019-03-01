@@ -1,18 +1,24 @@
-import React from "react"
-import Header from '../components/Header';
-import Splash from '../components/Splash';
-import Music from '../components/Music';
-import Giglist from '../components/Giglist';
-import Photos from '../components/Photos';
-import Contact from '../components/Contact';
-import Footer from '../components/Footer';
-import { ParallaxProvider } from 'react-scroll-parallax';
+import React from "react";
+import Header from "../components/Header";
+import Splash from "../components/Splash";
+import Music from "../components/Music";
+import Giglist from "../components/Giglist";
+import Photos from "../components/Photos";
+import Contact from "../components/Contact";
+import Footer from "../components/Footer";
+import { ParallaxProvider } from "react-scroll-parallax";
 
-import '../layout/global.css';
-import ParaDivider from "../components/ParaDivider";
+import "../layout/global.css";
 
 export default ({ data }) => (
   <ParallaxProvider>
+    {/* <Helmet>
+      <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAalGPy1sW3aX2aAFqSRfRDA-R4pvOUtE&callback=initMap"
+        async
+        defer
+      />
+    </Helmet> */}
     <Header splash={true} />
     <Splash />
     <Music />
@@ -21,17 +27,23 @@ export default ({ data }) => (
     <Contact />
     <Footer />
   </ParallaxProvider>
-)
+);
 export const query = graphql`
   {
     allMarkdownRemark {
       edges {
         node {
           frontmatter {
-            title path date address link description venue
+            title
+            path
+            date
+            address
+            link
+            description
+            venue
           }
         }
       }
     }
   }
-`
+`;

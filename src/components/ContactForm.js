@@ -1,14 +1,19 @@
-import React, { Component } from "react"
-import { ParallaxBanner } from 'react-scroll-parallax';
-import { withStyles, Typography, Grid, TextField, FormControl, Button } from '@material-ui/core';
+import React, { Component } from "react";
+import {
+  withStyles,
+  Grid,
+  TextField,
+  FormControl,
+  Button
+} from "@material-ui/core";
 
 const styles = {
   container: {
-    height: '80vh',
+    height: "80vh"
   },
   formContainer: {
     height: 500,
-    border: '1px solid black',
+    border: "1px solid black",
     padding: 15,
     borderRadius: 5
   },
@@ -17,7 +22,7 @@ const styles = {
     height: 500,
     padding: 20
   }
-}
+};
 
 class ContactForm extends Component {
   render() {
@@ -31,21 +36,11 @@ class ContactForm extends Component {
           className={classes.container}
         >
           <Grid item xs={10} lg={5} className={classes.border}>
-
             <FormControl margin="normal">
-
-              <TextField
-                label="Name"
-                variant="outlined"
-                fullWidth
-              />
+              <TextField label="Name" variant="outlined" fullWidth />
             </FormControl>
             <FormControl fullWidth margin="normal">
-              <TextField
-                label="Email"
-                variant="outlined"
-                fullWidth
-              />
+              <TextField label="Email" variant="outlined" fullWidth />
             </FormControl>
             <FormControl fullWidth margin="normal">
               <TextField
@@ -58,12 +53,14 @@ class ContactForm extends Component {
               />
             </FormControl>
             <FormControl margin="normal">
-              <Button type="submit" variant="outlined">Send</Button>
+              <Button type="submit" variant="outlined">
+                Send
+              </Button>
             </FormControl>
           </Grid>
         </Grid>
       </form>
-    )
+    );
   }
 }
 

@@ -1,33 +1,30 @@
-import React, { Component } from 'react';
-import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
+import React, { Component } from "react";
+import { withStyles } from "@material-ui/core";
 
-export class MapContainer extends Component {
+const styles = {
+  map: {
+    height: 400
+  }
+};
+
+class Map extends Component {
+  initMap = () => {
+    // const { center } = this.props;
+    // new window.google.maps.Map(document.getElementById("map"), {
+    //   center,
+    //   zoom: 14
+    // });
+  };
+  componentDidMount() {
+    // this.initMap();
+  }
+  componentDidUpdate(prev) {
+    if (prev.center !== this.props.center) this.initMap();
+  }
   render() {
-    console.log(this.props);
-    return (
-      <Map
-        style={{ width: 600, height: 400 }}
-        google={this.props.google}
-        zoom={14}
-        center={this.props.center}
-      >
-
-        <Marker
-          onClick={this.onMarkerClick}
-          name={'Current location'}
-          position={this.props.center}
-        />
-
-        <InfoWindow onClose={this.onInfoWindowClose}>
-          <div>
-            <h1>yo</h1>
-          </div>
-        </InfoWindow>
-      </Map>
-    );
+    const { classes } = this.props;
+    return <div className={classes.map} id="map" />;
   }
 }
 
-export default GoogleApiWrapper({
-  apiKey: ('AIzaSyBQbdqu0nFdFsqJPS0czvCovV5JnuwsCy4')
-})(MapContainer)
+export default withStyles(styles)(Map);

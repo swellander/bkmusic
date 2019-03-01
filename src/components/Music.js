@@ -1,21 +1,19 @@
-
-import React from 'react';
-import { ParallaxBanner } from 'react-scroll-parallax';
-import { withStyles, Grid, Typography } from '@material-ui/core';
-import SoundCloud from './SoundCloud';
+import React from "react";
+import { withStyles, Grid } from "@material-ui/core";
+import SoundCloud from "./SoundCloud";
 
 const styles = {
   container: {
-    height: '100vh',
-    backgroundColor: 'white'
+    height: "100vh",
+    backgroundColor: "white"
   },
   titleContainer: {
-    textAlign: 'center'
+    textAlign: "center"
   },
   title: {
-    letterSpacing: 11,
+    letterSpacing: 11
   }
-}
+};
 
 const Music = ({ classes }) => {
   return (
@@ -25,22 +23,11 @@ const Music = ({ classes }) => {
       alignItems="center"
       className={classes.container}
     >
-      <Grid
-        item
-        xs={12}
-        className={classes.titleContainer}
-      >
-        {/* <Typography
-          variant="display2"
-          className={classes.title}
-        >
-          MUSIC
-      </Typography> */}
+      <Grid item xs={12} className={classes.titleContainer}>
         <SoundCloud />
       </Grid>
     </Grid>
-
-  )
-}
+  );
+};
 
 export default withStyles(styles)(Music);
