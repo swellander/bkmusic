@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+const key = "AIzaSyCBNCRlWoEx3-V_N9BP7A_NpYyZNm5J_94";
+
 export default class HTML extends React.Component {
   render() {
     return (
@@ -23,13 +25,13 @@ export default class HTML extends React.Component {
           />
           {this.props.postBodyComponents}
           <script
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAalGPy1sW3aX2aAFqSRfRDA-R4pvOUtE&callback=initMap"
+            src={`https://maps.googleapis.com/maps/api/js?key=${key}&callback=initMap`}
+            // crossOrigin="anonymous"
             async
             defer
           />
-          <script>
-            {(window.__MUI_USE_NEXT_TYPOGRAPHY_VARIANTS__ = true)}
-          </script>
+          {/* {(window.__MUI_USE_NEXT_TYPOGRAPHY_VARIANTS__ = true)} */}
+          {/* </script> */}
         </body>
       </html>
     );

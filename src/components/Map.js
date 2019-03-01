@@ -9,11 +9,11 @@ const styles = {
 
 class Map extends Component {
   initMap = () => {
-    const { center } = this.props;
-    new window.google.maps.Map(document.getElementById("map"), {
-      center,
-      zoom: 14
-    });
+    // const { center } = this.props;
+    // new window.google.maps.Map(document.getElementById("map"), {
+    //   center,
+    //   zoom: 14
+    // });
   };
   componentDidMount() {
     // this.initMap();
