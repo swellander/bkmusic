@@ -2,7 +2,7 @@ module.exports = {
   pathPrefix: "/bkmusic",
   plugins: [
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-netlify-cms`,
+    // `gatsby-plugin-netlify-cms`,
     {
       resolve: "gatsby-source-filesystem",
       options: {
