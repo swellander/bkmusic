@@ -3,7 +3,8 @@
   "description": "Gatsby hello world starter",
   "license": "MIT",
   "scripts": {
-    "heroku-postbuild": "gatsby build"
+    "heroku-postbuild": "gatsby build",
+    "start": "gatsby serve"
   },
   "dependencies": {
     "@material-ui/core": "^3.4.0",
