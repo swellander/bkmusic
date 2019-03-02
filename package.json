@@ -3,11 +3,6 @@
   "description": "Gatsby hello world starter",
   "license": "MIT",
   "scripts": {
-    "develop": "gatsby develop",
-    "start": "npm run serve",
-    "build": "gatsby build",
-    "serve": "gatsby serve",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "heroku-postbuild": "gatsby build"
   },
   "dependencies": {
