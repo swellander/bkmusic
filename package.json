@@ -3,8 +3,8 @@
   "description": "Gatsby hello world starter",
   "license": "MIT",
   "scripts": {
-    "dev": "gatsby develop",
-    "start": "npm run dev",
+    "develop": "gatsby develop",
+    "start": "npm run develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
