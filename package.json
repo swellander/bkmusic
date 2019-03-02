@@ -6,6 +6,10 @@
     "heroku-postbuild": "gatsby build",
     "start": "gatsby serve"
   },
+  "engines": {
+    "node": "^8.0.0",
+    "yarn": "^1.2.1"
+  },
   "dependencies": {
     "@material-ui/core": "^3.4.0",
     "@material-ui/icons": "^3.0.1",
