@@ -37,7 +37,7 @@ class GigDetail extends Component {
     const that = this;
     geocoder.geocode(
       {
-        address: "443 E 17th st"
+        address: this.props.data.markdownRemark.frontmatter.venue
       },
       function(results) {
         const { lat, lng } = results[0].geometry.location;
