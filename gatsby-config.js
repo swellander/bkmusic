@@ -3,6 +3,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     // `gatsby-plugin-netlify-cms`,
+    `gatsby-transformer-remark`,
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -10,6 +11,11 @@ module.exports = {
         name: "markdown-pages"
       }
     },
-    `gatsby-transformer-remark`
+    {
+      resolve: `gatsby-plugin-material-ui`,
+      options: {
+        // Add any options here
+      }
+    }
   ]
 };

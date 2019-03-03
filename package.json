@@ -6,10 +6,6 @@
     "heroku-postbuild": "gatsby build",
     "start": "gatsby serve"
   },
-  "engines": {
-    "node": "^8.0.0",
-    "yarn": "^1.2.1"
-  },
   "dependencies": {
     "@material-ui/core": "^3.4.0",
     "@material-ui/icons": "^3.0.1",
@@ -18,6 +14,7 @@
     "emotion-server": "^9.2.12",
     "gatsby": "^2.0.33",
     "gatsby-plugin-emotion": "^2.0.6",
+    "gatsby-plugin-material-ui": "^1.2.4",
     "gatsby-plugin-netlify-cms": "^3.0.7",
     "gatsby-plugin-react-helmet": "^3.0.5",
     "gatsby-plugin-typography": "^2.2.1",

@@ -43,8 +43,6 @@ class GigDetail extends Component {
     // );
     // Geocode.setApiKey(process.env.GEO_KEY);
     // Geocode.fromAddress(
-    //   this.props.data.markdownRemark.frontmatter.address
-    // ).then(
     //   response => {
     //     const center = response.results[0].geometry.location;
     //     this.setState({ center });
