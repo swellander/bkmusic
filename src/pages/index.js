@@ -7,18 +7,19 @@ import Photos from "../components/Photos";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import { ParallaxProvider } from "react-scroll-parallax";
+import { Helmet } from "react-helmet";
 
 import "../layout/global.css";
 
 export default ({ data }) => (
   <ParallaxProvider>
-    {/* <Helmet>
-      <script
+    <Helmet>
+      {/* <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAalGPy1sW3aX2aAFqSRfRDA-R4pvOUtE&callback=initMap"
         async
         defer
-      />
-    </Helmet> */}
+      /> */}
+    </Helmet>
     <Header splash={true} />
     <Splash />
     <Music />

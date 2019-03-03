@@ -4,7 +4,8 @@
   "license": "MIT",
   "scripts": {
     "heroku-postbuild": "gatsby build",
-    "start": "gatsby serve"
+    "start": "gatsby serve",
+    "dev": "gatsby develop"
   },
   "dependencies": {
     "@material-ui/core": "^3.4.0",
