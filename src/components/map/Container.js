@@ -2,15 +2,22 @@ import React from "react";
 import { GoogleApiWrapper } from "google-maps-react";
 import Map from "./Map";
 
-export class Container extends React.Component {
+class Container extends React.Component {
   render() {
-    if (!this.props.loaded) {
-      return <div>Loading...</div>;
-    }
+    // if (!this.props.loaded) {
+    //   return <div>Loading...</div>;
+    // }
     return (
-      <div style={{ height: 100, width: 100 }}>
+      <div style={{ height: "100%", width: "100%" }}>
         <Map google={this.props.google} />
       </div>
+      // <div
+      //   style={{
+      //     height: "100%",
+      //     width: "100%",
+      //     border: "1px solid black"
+      //   }}
+      // />
     );
   }
 }

@@ -3,17 +3,24 @@ import { withStyles } from "@material-ui/core";
 
 const styles = {
   map: {
-    height: 400
+    height: "100%"
   }
 };
 
 class Map extends Component {
   initMap = () => {
-    // const { center } = this.props;
-    // new window.google.maps.Map(document.getElementById("map"), {
-    //   center,
-    //   zoom: 14
-    // });
+    const { center } = this.props;
+    console.log(center);
+    try {
+      new window.google.maps.Map(document.getElementById("map"), {
+        center,
+        zoom: 14
+      });
+      console.log("Mounted");
+    } catch (ex) {
+      console.log("UGGGG");
+      console.error(ex);
+    }
   };
   componentDidMount() {
     // this.initMap();

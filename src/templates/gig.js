@@ -3,10 +3,10 @@ import { graphql } from "gatsby";
 import Header from "../components/Header";
 import { withStyles, Grid, Typography, Divider } from "@material-ui/core";
 import moment from "moment";
-// import Map from "../components/Map";
+import Map from "../components/Map";
 import Footer from "../components/Footer";
-// import Geocode from "react-geocode";
-import Container from "../components/map/Container";
+import Geocode from "react-geocode";
+// import Container from "../components/map/Container";
 
 const styles = {
   wrapper: {
@@ -15,14 +15,15 @@ const styles = {
     flexDirection: "column"
   },
   container: {
-    marginTop: 50,
-    height: "100%",
+    marginTop: 30,
+    // height: "90%",
     flexGrow: 1
   },
   map: {
-    // height: 200,
+    height: 400,
     width: "100%",
-    marginTop: 38
+    marginTop: 38,
+    marginBottom: 30
   },
   footer: {}
 };
@@ -32,25 +33,31 @@ class GigDetail extends Component {
     center: {}
   };
   componentDidMount() {
-    // var geocoder = new window.google.maps.Geocoder();
-    // geocoder.geocode(
-    //   {
-    //     address: "443 E 17th st"
-    //   },
-    //   function(results) {
-    //     console.log("test results", results[0].geometry.location); //LatLng
-    //   }
-    // );
-    // Geocode.setApiKey(process.env.GEO_KEY);
-    // Geocode.fromAddress(
-    //   response => {
-    //     const center = response.results[0].geometry.location;
-    //     this.setState({ center });
-    //   },
-    //   error => {
-    //     console.error("something went wrong", error);
-    //   }
-    // );
+    var geocoder = new window.google.maps.Geocoder();
+    const that = this;
+    geocoder.geocode(
+      {
+        address: "443 E 17th st"
+      },
+      function(results) {
+        const { lat, lng } = results[0].geometry.location;
+        const center = {
+          lat: lat(),
+          lng: lng()
+        };
+        that.setState({ center });
+      }
+    );
+    Geocode.setApiKey(process.env.GEO_KEY);
+    Geocode.fromAddress(
+      response => {
+        const center = response.results[0].geometry.location;
+        this.setState({ center });
+      },
+      error => {
+        console.error("something went wrong", error);
+      }
+    );
   }
   render() {
     const { markdownRemark } = this.props.data; // data.markdownRemark holds our post data
@@ -61,6 +68,7 @@ class GigDetail extends Component {
     return (
       <div className={classes.wrapper}>
         <Header />
+
         <Grid className={classes.container} container justify="center">
           <Grid item xs={9} container justify="space-between">
             <Grid item xs={12} lg={5}>
@@ -78,7 +86,7 @@ class GigDetail extends Component {
 
             <Grid className={classes.map} item xs={12} lg={6}>
               {/* <Map test="test" center={this.state.center} /> */}
-              {/* <Map center={this.state.center} /> */}
+              <Map center={this.state.center} />
               {/* <Container /> */}
             </Grid>
           </Grid>

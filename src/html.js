@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const key = "AIzaSyCBNCRlWoEx3-V_N9BP7A_NpYyZNm5J_94";
+const key = "AIzaSyArIUFdJH1Wt9eZn-EEDmJ4SMBjbSLCHPs";
 
 export default class HTML extends React.Component {
   render() {
@@ -25,7 +25,7 @@ export default class HTML extends React.Component {
           />
           {this.props.postBodyComponents}
           <script
-            src={`https://maps.googleapis.com/maps/api/js?key=${key}&callback=initMap`}
+            src={`https://maps.googleapis.com/maps/api/js?key=${key}`}
             // crossOrigin="anonymous"
             async
             defer
