@@ -22,10 +22,13 @@ const styles = {
   map: {
     height: 400,
     width: "100%",
-    marginTop: 38,
+    marginTop: 48,
     marginBottom: 30
   },
-  footer: {}
+  footer: {},
+  title: {
+    marginBottom: 10
+  }
 };
 
 class GigDetail extends Component {
@@ -72,7 +75,9 @@ class GigDetail extends Component {
         <Grid className={classes.container} container justify="center">
           <Grid item xs={9} container justify="space-between">
             <Grid item xs={12} lg={5}>
-              <Typography variant="h4">{title}</Typography>
+              <Typography variant="h4" className={classes.title}>
+                {title}
+              </Typography>
               <Divider />
               <Typography variant="subtitle1" style={{ marginTop: 10 }}>
                 {moment(date).format("dddd, MMMM Do, YYYY")}
