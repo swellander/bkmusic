@@ -13,8 +13,8 @@ const styles = theme => ({
     backgroundColor: theme.palette.background.paper
   },
   inner: {
-    margin: "auto",
-    padding: 100
+    margin: "auto"
+    // padding: 100
   },
   gridList: {
     width: "100%",
@@ -40,7 +40,7 @@ function PhotoGrid(props) {
   return (
     <div className={classes.root}>
       <Grid container justify="center" alignContent="center">
-        <Grid className={classes.inner} item xs={11} lg={9}>
+        <Grid className={classes.inner} item xs={11} lg={7}>
           {/* <div style={{ backgroundColor: 'green', height: 50, width: 50 }}></div> */}
           <GridList
             spacing={9}
