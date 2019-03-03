@@ -10,7 +10,8 @@ const styles = {
     height: "100%",
     width: "100vw",
     backgroundColor: "white",
-    paddingTop: 30
+    paddingTop: 30,
+    paddingBottom: 30
   },
   link: {
     width: "100%"
