@@ -18,6 +18,7 @@ const styles = {
 const Music = ({ classes }) => {
   return (
     <Grid
+      id="music"
       container
       justify="center"
       alignItems="center"

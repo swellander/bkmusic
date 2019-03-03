@@ -6,7 +6,7 @@ import ContactForm from "./ContactForm";
 
 const styles = {
   container: {
-    height: "100%",
+    // height: "100vh",
     backgroundColor: "white",
     paddingTop: 30
   },
@@ -19,7 +19,7 @@ const Contact = ({ classes, edges }) => {
   return (
     <Fragment>
       <ParallaxDivider image={contactImg} title="Get in Touch" />
-      <div className={classes.container}>
+      <div className={classes.container} id="contact">
         <ContactForm />
       </div>
     </Fragment>

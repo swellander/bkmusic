@@ -5,17 +5,23 @@ import {
   ListItem,
   ListItemText,
   IconButton,
-  withStyles
+  withStyles,
+  Divider
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 
 const styles = {
   menuButton: {
-    marginLeft: -12,
-    marginRight: 20
+    // marginLeft: -12,
+    // marginRight: 20
   },
   menuList: {
-    backgroundColor: "black"
+    backgroundColor: "transparent",
+    boxShadow: "none",
+    width: 180
+  },
+  text: {
+    color: "white"
   }
 };
 
@@ -30,17 +36,40 @@ class Menu extends React.Component {
     const { classes } = this.props;
     const sideMenu = (
       <List>
-        <ListItem button>
-          <ListItemText primary="Music" />
+        <ListItem
+          component="a"
+          href="#music"
+          button
+          onClick={() => this.toggleDrawer(false)}
+        >
+          <ListItemText classes={{ primary: classes.text }} primary="Music" />
         </ListItem>
-        <ListItem button>
-          <ListItemText primary="Performances" />
+        <ListItem
+          button
+          component="a"
+          href="#performances"
+          onClick={() => this.toggleDrawer(false)}
+        >
+          <ListItemText
+            classes={{ primary: classes.text }}
+            primary="Performances"
+          />
         </ListItem>
-        <ListItem button>
-          <ListItemText primary="About" />
+        <ListItem
+          button
+          component="a"
+          href="#about"
+          onClick={() => this.toggleDrawer(false)}
+        >
+          <ListItemText classes={{ primary: classes.text }} primary="About" />
         </ListItem>
-        <ListItem button>
-          <ListItemText primary="Contact" />
+        <ListItem
+          button
+          component="a"
+          href="#contact"
+          onClick={() => this.toggleDrawer(false)}
+        >
+          <ListItemText classes={{ primary: classes.text }} primary="Contact" />
         </ListItem>
       </List>
     );
@@ -55,6 +84,7 @@ class Menu extends React.Component {
           <MenuIcon fontSize="large" />
         </IconButton>
         <SwipeableDrawer
+          classes={{ paper: classes.menuList }}
           anchor="right"
           open={this.state.open}
           onClose={() => this.toggleDrawer(false)}

@@ -9,7 +9,7 @@ import {
 
 const styles = {
   container: {
-    height: "80vh"
+    minHeight: "100vh"
   },
   formContainer: {
     height: 500,
@@ -48,7 +48,7 @@ class ContactForm extends Component {
                 variant="outlined"
                 fullWidth
                 multiline={true}
-                rows={6}
+                rows={9}
                 rowsMax={10}
               />
             </FormControl>
