@@ -5,7 +5,7 @@ import moment from "moment";
 
 const styles = {
   btn: {
-    float: "right",
+    // float: "right",
     marginTop: 20
   },
   dateSquareContainer: {
@@ -48,7 +48,7 @@ const Gig = ({ classes, gig }) => {
         </Paper>
       </Grid>
       {/* TODO: this is a hacky way to get spacing */}
-      <Grid item xs={8} className={classes.bodyContainer}>
+      <Grid item xs={6} className={classes.bodyContainer}>
         <Typography variant="h4">{gig.title}</Typography>
         <Typography>{gig.venue}</Typography>
         <Typography>{time}</Typography>
