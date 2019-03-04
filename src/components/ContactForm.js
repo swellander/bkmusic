@@ -28,7 +28,7 @@ class ContactForm extends Component {
   render() {
     const { classes } = this.props;
     return (
-      <form data-netlify="true">
+      <form action="/success" name="contact" method="POST" data-netlify="true">
         <Grid
           container
           justify="center"
@@ -37,16 +37,27 @@ class ContactForm extends Component {
         >
           <Grid item xs={10} lg={5} className={classes.border}>
             <FormControl margin="normal">
-              <TextField label="Name" variant="outlined" fullWidth />
+              <TextField
+                label="Name"
+                variant="outlined"
+                fullWidth
+                name="name"
+              />
             </FormControl>
             <FormControl fullWidth margin="normal">
-              <TextField label="Email" variant="outlined" fullWidth />
+              <TextField
+                label="Email"
+                variant="outlined"
+                fullWidth
+                name="email"
+              />
             </FormControl>
             <FormControl fullWidth margin="normal">
               <TextField
                 label="Message"
                 variant="outlined"
                 fullWidth
+                name="message"
                 multiline={true}
                 rows={9}
                 rowsMax={10}
