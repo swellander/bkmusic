@@ -38,9 +38,11 @@ class GigDetail extends Component {
   componentDidMount() {
     var geocoder = new window.google.maps.Geocoder();
     const that = this;
+    console.log("YOOOOO");
+    console.log(this.props.data.markdownRemark.frontmatter);
     geocoder.geocode(
       {
-        address: this.props.data.markdownRemark.frontmatter.venue
+        address: this.props.data.markdownRemark.frontmatter.address
       },
       function(results) {
         const { lat, lng } = results[0].geometry.location;
