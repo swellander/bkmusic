@@ -1,6 +1,7 @@
 import React from "react";
 import { ParallaxBanner } from "react-scroll-parallax";
 import { withStyles, Typography, Grid } from "@material-ui/core";
+import { isMobileDevice } from "../util";
 
 const styles = {
   container: {
@@ -16,6 +17,7 @@ const styles = {
 
 const ParallaxDivider = ({ classes, image, title }) => (
   <ParallaxBanner
+    disabled={isMobileDevice()}
     className={classes.banner}
     layers={[
       {

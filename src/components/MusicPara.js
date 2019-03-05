@@ -1,7 +1,8 @@
 import React from "react";
 import { Parallax } from "react-scroll-parallax";
 import { withStyles, Typography } from "@material-ui/core";
-import splashImg from "./smile.jpg";
+import smileImg from "./smile.jpg";
+import { isMobileDevice } from "../util";
 
 const styles = {
   container: {
@@ -16,7 +17,7 @@ const styles = {
     height: "150vh", // this should be dynamic, right now it's fixed based on a min max offset
     backgroundSize: "cover",
     backgroundPosition: "center",
-    backgroundImage: `url(${splashImg})`
+    backgroundImage: `url(${smileImg})`
   },
   titleContainer: {
     position: "absolute",
@@ -38,6 +39,7 @@ const styles = {
 const MusicPara = ({ classes }) => (
   <div className={classes.container}>
     <Parallax
+      disabled={isMobileDevice()}
       style={{ margin: 0 }}
       expanded
       offsetYMax={150}
