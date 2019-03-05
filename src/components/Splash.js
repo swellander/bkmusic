@@ -2,6 +2,7 @@ import React from "react";
 import { Parallax } from "react-scroll-parallax";
 import { withStyles, Typography } from "@material-ui/core";
 import splashImg from "../img/splash.jpg";
+import { isMobileDevice } from '../util';
 
 // const splashImg = "http://d3trgdqc235vm6.cloudfront.net/splash.jpg";
 
@@ -41,6 +42,7 @@ const styles = {
 const Splash = ({ classes }) => (
   <div className={classes.container}>
     <Parallax
+      disabled={isMobileDevice()}
       style={{ margin: 0 }}
       expanded
       offsetYMax={150}
