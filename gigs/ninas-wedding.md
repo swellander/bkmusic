@@ -14,6 +14,6 @@ description: >-
   composition at age 5. He received his Bachelor of Arts Degree from Manhattan
   School of Music.
 link: google.com
-path: ninas-wedding
+path: /ninas-wedding
 ---
 
