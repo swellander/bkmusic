@@ -9,6 +9,8 @@ const styles = () => ({
     bottom: 0,
     left: 0,
     right: 0,
+    maxHeight: "80vh",
+    maxWidth: "90vw",
     margin: "auto",
     borderRadius: 7
   }
