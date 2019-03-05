@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import { Parallax } from "react-scroll-parallax";
 import { withStyles, Typography } from "@material-ui/core";
 import splashImg from "../img/splash.jpg";
@@ -13,6 +13,7 @@ const styles = {
     overflow: "hidden"
   },
   imageContainer: {
+    backgroundColor: "#1f1f1f",
     width: "100vw",
     height: "150vh",
     display: "flex",
@@ -20,7 +21,8 @@ const styles = {
     alignItems: "center"
   },
   image: {
-    height: "110%"
+    height: "110%",
+    paddingLeft: 50
     // height: "10" // this should be dynamic, right now it's fixed based on a min max offset
     // backgroundSize: "cover",
     // backgroundPosition: "center",
@@ -45,30 +47,48 @@ const styles = {
   }
 };
 
-const Splash = ({ classes }) => (
-  <div className={classes.container}>
-    <Parallax
-      disabled={isMobileDevice()}
-      style={{ margin: 0 }}
-      expanded
-      offsetYMax={150}
-      offsetYMin={-150}
-      slowerScrollRate
-      tag="figure"
-    >
-      <div className={classes.imageContainer}>
-        <img src={splashImg} className={classes.image} />
+class Splash extends Component {
+  state = {
+    loaded: false
+  };
+  render() {
+    const { classes } = this.props;
+    const { loaded } = this.state;
+    return (
+      <div className={classes.container}>
+        <Parallax
+          disabled={isMobileDevice()}
+          style={{ margin: 0 }}
+          expanded
+          offsetYMax={150}
+          offsetYMin={-150}
+          slowerScrollRate
+          tag="figure"
+        >
+          <div className={classes.imageContainer}>
+            <img
+              style={
+                loaded
+                  ? { transition: "opacity 0.5s", opacity: 1 }
+                  : { opacity: 0 }
+              }
+              onLoad={() => this.setState({ loaded: true })}
+              src={splashImg}
+              className={classes.image}
+            />
+          </div>
+        </Parallax>
+        <div className={classes.titleContainer}>
+          <Typography variant="h4" className={classes.title}>
+            BRANDON NELSON
+          </Typography>
+          <div>
+            <SocialIcons />
+          </div>
+        </div>
       </div>
-    </Parallax>
-    <div className={classes.titleContainer}>
-      <Typography variant="h4" className={classes.title}>
-        BRANDON NELSON
-      </Typography>
-      <div>
-        <SocialIcons />
-      </div>
-    </div>
-  </div>
-);
+    );
+  }
+}
 
 export default withStyles(styles)(Splash);
