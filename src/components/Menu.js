@@ -5,8 +5,7 @@ import {
   ListItem,
   ListItemText,
   IconButton,
-  withStyles,
-  Divider
+  withStyles
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 

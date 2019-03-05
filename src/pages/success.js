@@ -2,13 +2,7 @@ import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { Link } from "gatsby";
-import {
-  withStyles,
-  Typography,
-  Grid,
-  Button,
-  Divider
-} from "@material-ui/core";
+import { withStyles, Typography, Grid, Button } from "@material-ui/core";
 
 const styles = {
   wrapper: {

@@ -8,7 +8,7 @@ const styles = {
   container: {
     // height: "100vh",
     backgroundColor: "white",
-    paddingTop: 30
+    paddingTop: 10
   },
   link: {
     width: "100%"
