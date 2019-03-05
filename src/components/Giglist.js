@@ -17,6 +17,10 @@ const styles = {
 };
 
 const Giglist = ({ classes, edges }) => {
+  // console.log(edges);
+  // edges = edges.filter(gig => new Date(gig.date) > Date.now());
+  // edges.sort((a, b) => new Date(a.date) - new Date(b.date));
+  // console.log(edges);
   return (
     <Fragment>
       <ParallaxDivider image={performancesImg} title="Performances" />

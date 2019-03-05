@@ -37,7 +37,7 @@ class Menu extends React.Component {
       <List>
         <ListItem
           component="a"
-          href="#music"
+          href="/#music"
           button
           onClick={() => this.toggleDrawer(false)}
         >
@@ -46,7 +46,7 @@ class Menu extends React.Component {
         <ListItem
           button
           component="a"
-          href="#performances"
+          href="/#performances"
           onClick={() => this.toggleDrawer(false)}
         >
           <ListItemText
@@ -57,7 +57,7 @@ class Menu extends React.Component {
         <ListItem
           button
           component="a"
-          href="#about"
+          href="/#about"
           onClick={() => this.toggleDrawer(false)}
         >
           <ListItemText classes={{ primary: classes.text }} primary="About" />
@@ -65,7 +65,7 @@ class Menu extends React.Component {
         <ListItem
           button
           component="a"
-          href="#contact"
+          href="/#contact"
           onClick={() => this.toggleDrawer(false)}
         >
           <ListItemText classes={{ primary: classes.text }} primary="Contact" />

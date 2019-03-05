@@ -24,6 +24,10 @@ const styles = theme => ({
   }
 });
 
+function isFeaturedPhoto(idx) {
+  return idx === 0 || idx === 6 || idx === 10 || idx === 16;
+}
+
 function PhotoGrid(props) {
   const { classes, imageData } = props;
   let images;
@@ -51,10 +55,7 @@ function PhotoGrid(props) {
             {images.map((tile, i) => (
               //TODO: This is sloppy
               // <Photo key={tile.img} tile={tile} i={i} />
-              <GridListTile
-                key={tile.img}
-                cols={i % 5 === 0 || i === 0 ? 2 : 1}
-              >
+              <GridListTile key={tile.img} cols={isFeaturedPhoto(i) ? 2 : 1}>
                 <img src={tile.img} alt={tile.title} />
               </GridListTile>
             ))}
