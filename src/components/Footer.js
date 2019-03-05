@@ -2,6 +2,7 @@ import React from "react";
 import { Grid, IconButton, Typography, withStyles } from "@material-ui/core";
 import { SocialIcon } from "react-social-icons";
 import moment from "moment";
+import SocialIcons from "./SocialIcons";
 
 const styles = {
   container: {
@@ -36,27 +37,7 @@ const Footer = ({ classes }) => (
       justify="center"
       className={classes.innnerContainer}
     >
-      <IconButton className={classes.iconBtn}>
-        <SocialIcon
-          url="https://www.facebook.com/Brandon.Loves.Pie"
-          style={{ height: 30, width: 30 }}
-          color="white"
-        />
-      </IconButton>
-      <IconButton>
-        <SocialIcon
-          url="https://soundcloud.com/brandon-nelson-75"
-          style={{ height: 30, width: 30 }}
-          color="white"
-        />
-      </IconButton>
-      <IconButton>
-        <SocialIcon
-          url="https://www.instagram.com/brandonnelsonmusic/"
-          style={{ height: 30, width: 30 }}
-          color="white"
-        />
-      </IconButton>
+      <SocialIcons />
     </Grid>
     <Grid item xs={12}>
       <Typography variant="caption" className={classes.copyRight}>

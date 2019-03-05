@@ -2,14 +2,12 @@ import React from "react";
 import { Parallax } from "react-scroll-parallax";
 import { withStyles, Typography } from "@material-ui/core";
 import splashImg from "../img/splash.jpg";
-import { isMobileDevice } from '../util';
-
-// const splashImg = "http://d3trgdqc235vm6.cloudfront.net/splash.jpg";
+import { isMobileDevice } from "../util";
+import SocialIcons from "./SocialIcons";
 
 const styles = {
   container: {
     position: "relative",
-    // marginLeft: -40,
     width: "100%",
     height: "100vh",
     overflow: "hidden"
@@ -23,7 +21,6 @@ const styles = {
   },
   titleContainer: {
     position: "absolute",
-    // height: '100vh',
     top: 0,
     bottom: 0,
     left: 0,
@@ -31,11 +28,13 @@ const styles = {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    textAlign: "center"
+    textAlign: "center",
+    flexDirection: "column"
   },
   title: {
     color: "white",
-    letterSpacing: 11
+    letterSpacing: 11,
+    paddingBottom: 20
   }
 };
 
@@ -56,6 +55,9 @@ const Splash = ({ classes }) => (
       <Typography variant="h4" className={classes.title}>
         BRANDON NELSON
       </Typography>
+      <div>
+        <SocialIcons />
+      </div>
     </div>
   </div>
 );
