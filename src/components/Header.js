@@ -23,7 +23,8 @@ const styles = {
   title: {
     flexGrow: 1,
     fontSize: 20,
-    letterSpacing: 4
+    letterSpacing: 4,
+    textDecoration: "none"
   },
   transparent: {
     opacity: 0,
