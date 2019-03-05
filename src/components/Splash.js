@@ -12,12 +12,19 @@ const styles = {
     height: "100vh",
     overflow: "hidden"
   },
-  image: {
+  imageContainer: {
     width: "100vw",
-    height: "150vh", // this should be dynamic, right now it's fixed based on a min max offset
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    backgroundImage: `url(${splashImg})`
+    height: "150vh",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center"
+  },
+  image: {
+    height: "110%"
+    // height: "10" // this should be dynamic, right now it's fixed based on a min max offset
+    // backgroundSize: "cover",
+    // backgroundPosition: "center",
+    // backgroundImage: `url(${splashImg})`
   },
   titleContainer: {
     position: "absolute",
@@ -49,7 +56,9 @@ const Splash = ({ classes }) => (
       slowerScrollRate
       tag="figure"
     >
-      <div className={classes.image} />
+      <div className={classes.imageContainer}>
+        <img src={splashImg} className={classes.image} />
+      </div>
     </Parallax>
     <div className={classes.titleContainer}>
       <Typography variant="h4" className={classes.title}>
