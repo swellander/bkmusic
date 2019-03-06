@@ -4,6 +4,8 @@ import { withStyles, Typography } from "@material-ui/core";
 import splashImg from "../img/splash.jpg";
 import { isMobileDevice } from "../util";
 import SocialIcons from "./SocialIcons";
+import Img from "gatsby-image";
+import SplashImage from "./images/SplashImage";
 
 const styles = {
   container: {
@@ -66,16 +68,7 @@ class Splash extends Component {
           tag="figure"
         >
           <div className={classes.imageContainer}>
-            <img
-              style={
-                loaded
-                  ? { transition: "opacity 0.5s", opacity: 1 }
-                  : { opacity: 0 }
-              }
-              onLoad={() => this.setState({ loaded: true })}
-              src={splashImg}
-              className={classes.image}
-            />
+            <SplashImage imageFileName="landing.jpg" />
           </div>
         </Parallax>
         <div className={classes.titleContainer}>

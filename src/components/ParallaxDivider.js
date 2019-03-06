@@ -38,8 +38,6 @@ const ParallaxDivider = ({ classes, image, title }) => (
       </Grid>
     </Grid>
   </ParallaxBanner>
-  // <div className={classes.titleContainer}>
-  // </div>
 );
 
 export default withStyles(styles)(ParallaxDivider);
