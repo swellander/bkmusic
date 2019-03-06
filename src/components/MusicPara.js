@@ -1,7 +1,7 @@
 import React from "react";
 import { Parallax } from "react-scroll-parallax";
 import { withStyles, Typography } from "@material-ui/core";
-import smileImg from "./smile.jpg";
+import SmileImage from "./images/SmileImage";
 import { isMobileDevice } from "../util";
 
 const styles = {
@@ -47,7 +47,8 @@ const MusicPara = ({ classes }) => (
       slowerScrollRate
       tag="figure"
     >
-      <div className={classes.image} />
+      {/* <div className={classes.image} /> */}
+      <SmileImage />
     </Parallax>
     <div className={classes.titleContainer}>
       <Typography variant="h4" className={classes.title}>
